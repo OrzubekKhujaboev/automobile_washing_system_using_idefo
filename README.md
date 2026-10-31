@@ -1,30 +1,89 @@
-# Avto Yuvish — Boshqaruv tizimi
+# 🚗 Avtomobil yuvish — Boshqaruv tizimi
 
-This is a **working car wash management app**, not an IDEF0 diagram viewer. Built in C# Windows Forms for .NET 10.
+Ushbu loyiha avtomobil yuvish shoxobchasi faoliyatini boshqarish uchun ishlab chiqilgan dastur hisoblanadi.
 
-## Run on Windows
+Dastur **C# Windows Forms** texnologiyasida, **.NET 10** platformasi asosida yaratilgan.
 
-1. Open this folder in VS Code.
-2. Open **Terminal → New Terminal**.
-3. Run:
+Bu loyiha IDEF0 diagrammalarini ko‘rsatish dasturi emas, balki avtomobil yuvish jarayonlarini boshqarishga mo‘ljallangan amaliy dasturdir.
+
+## 💻 Dasturni ishga tushirish
+
+Dastur Windows operatsion tizimida ishlash uchun mo‘ljallangan.
+
+1. Loyiha papkasini **Visual Studio Code** dasturida oching.
+2. **Terminal → New Terminal** bo‘limiga o‘ting.
+3. Quyidagi buyruqlarni ketma-ket bajaring:
 
 ```powershell
 dotnet restore
 dotnet run
 ```
 
-The project requires the **.NET 10 SDK** and **.NET 10 Windows Desktop Runtime**. Check `dotnet --list-sdks` and `dotnet --list-runtimes`.
+**Talab qilinadigan dasturiy ta’minot:**
+- .NET 10 SDK
+- .NET 10 Windows Desktop Runtime
 
-## Features
+O‘rnatilgan versiyalarni tekshirish uchun:
 
-- A1 — Create an order (customer, phone, plate, model, service, automatically calculated price).
-- A2 — Mark vehicle ready.
-- A3 — Mark washing complete.
-- A4 — Approve inspection, collect payment, hand over the car.
-- Search and list orders, totals, finished and active jobs.
-- Automatic local order storage as JSON under `%LOCALAPPDATA%\AvtoYuvishBoshqaruvApp\orders.json`.
-- Export simple text receipt for completed orders.
+```powershell
+dotnet --list-sdks
+dotnet --list-runtimes
+```
 
-Note: payments and receipts are **demo records**, not a real payment gateway or legally valid fiscal receipt.
+## ⚙️ Dasturning asosiy imkoniyatlari
 
-This project has been authored but **not compiler-tested** in the creation environment, which has no .NET SDK.
+### A1 — Buyurtma yaratish
+- Mijozning ismi va telefon raqamini kiritish.
+- Avtomobilning davlat raqami va modelini kiritish.
+- Yuvish xizmatini tanlash.
+- Xizmat narxini avtomatik hisoblash.
+
+### A2 — Avtomobilni tayyor deb belgilash
+- Avtomobilning tayyorlik holatini belgilash.
+- Buyurtma holatini yangilash.
+
+### A3 — Yuvish jarayonini yakunlash
+- Avtomobil yuvish ishlari tugaganini qayd etish.
+- Buyurtma holatini yangilash.
+
+### A4 — Tekshirish, to‘lov va topshirish
+- Yakuniy tekshiruvni tasdiqlash.
+- To‘lovni qabul qilingan deb qayd etish.
+- Avtomobilni mijozga topshirish.
+
+## 📋 Buyurtmalarni boshqarish
+
+Dastur quyidagi imkoniyatlarni taqdim etadi:
+
+- Buyurtmalar ro‘yxatini ko‘rish.
+- Buyurtmalarni qidirish.
+- Faol va yakunlangan buyurtmalarni kuzatish.
+- Umumiy ko‘rsatkichlarni ko‘rish.
+
+## 💾 Ma’lumotlarni saqlash
+
+Buyurtmalar kompyuterning mahalliy xotirasida **JSON** formatida avtomatik saqlanadi.
+
+Ma’lumotlar joylashuvi:
+
+```text
+%LOCALAPPDATA%\AvtoYuvishBoshqaruvApp\orders.json
+```
+
+## 🧾 Chek yaratish
+
+Yakunlangan buyurtmalar uchun oddiy matnli chekni eksport qilish imkoniyati mavjud.
+
+**Eslatma:** Dasturdagi to‘lovlar va cheklar namoyish uchun mo‘ljallangan. Ular haqiqiy to‘lov tizimiga ulanmagan va qonuniy fiskal chek hisoblanmaydi.
+
+## 🛠️ Texnologiyalar
+
+- Dasturlash tili: C#
+- Grafik interfeys: Windows Forms
+- Platforma: .NET 10
+- Ma’lumotlarni saqlash: JSON
+- Operatsion tizim: Windows
+
+## 📌 Loyiha holati
+
+Loyihaning dastur kodi tayyorlangan, ammo dastur yaratilgan muhitda .NET SDK mavjud bo‘lmagani sababli kompilyatsiya orqali tekshirilmagan.
